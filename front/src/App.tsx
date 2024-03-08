@@ -1,19 +1,15 @@
-import React from 'react';
-import Logo from "./icons/logo.svg"
+import GlobalStyle from "./styles/GlobalStyle.ts";
+import Header from "./components/header/header.tsx";
 
-function App() {
+import styled from "styled-components"
+
+export default function App() {
   return (
     <>
-      <div>
-        <div>
-          <a href="/">
-            <img src="/images/Tree.png" alt="" />
-          </a>
-        </div>
-      </div>
+      <GlobalStyle />
+      <Header/>
+
       
     </>
   );
-}
-
-export default App;
+};

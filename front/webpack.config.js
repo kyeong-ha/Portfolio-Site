@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
     entry: [
         './src/index.tsx'
@@ -9,9 +11,19 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx|ts|tsx)$/,
+                test: /\.(tsx|ts|js|jsx)$/,
                 exclude: /node_modules/,
-                use: ['babel-loader']
+                loader: 'babel-loader',
+                options: {
+                cacheCompression: false,
+                cacheDirectory: true,
+                presets: [
+                    '@babel/preset-env',
+                    ['@babel/preset-react', { runtime: 'automatic' }],
+                    '@babel/preset-typescript',
+                ],
+                    plugins: [['babel-plugin-styled-components']]
+                }
             },
             {
                 test: /\.svg$/,
@@ -20,6 +32,9 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx', '.ts', '.tsx']
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
+        alias: {
+            "@": path.resolve(__dirname, "src/")
+        }
     }
 };
