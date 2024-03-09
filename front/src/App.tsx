@@ -1,19 +1,23 @@
-import GlobalStyle from "./styles/GlobalStyle.ts";
-import Header from "./components/header/header.tsx";
+import GlobalStyle from "./styles/global.style";
+import Header from "./components/header/header";
+import ProfileForm from "./components/profile-form/profile-form";
+import Container from "./components/container/container-layout";
+import { ThemeProvider } from "styled-components";
+import theme from "./styles/colors/light-color";
 
-import styled from "styled-components"
-import Symbol from "./icons/symbol.svg";
 
 export default function App() {
   return (
     <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header/>
 
-      <Symbol />
-      Park Kyeongha
-      Web Developer
-      
+
+      <Container textAlign="left">
+        <ProfileForm/>
+      </Container>
+    </ThemeProvider>
     </>
   );
 };

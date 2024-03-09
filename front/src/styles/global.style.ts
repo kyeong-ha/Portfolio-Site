@@ -7,18 +7,22 @@ const GlobalStyle = createGlobalStyle`
         padding:0;
         border:0;
     }
-    #root { position:relative; }
-    html,body {
-        color: #333333;
-        background-color: #F2F4F3;
+    html,body,#root {
+        background-color: ${(props) => props.theme.bodyBackgroundColor};
+        color:${(props) => props.theme.bodyFontColor};
         width: 100%;
         height: 100%;
+        min-height: 820px;
         font-size: 16px;
         font-family: "Raleway", sans-serif;
         font-optical-sizing: auto;
         text-align: center;
         position: relative;
         overflow-x: clip;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       h1{
           font-size: 90px;
@@ -67,6 +71,12 @@ const GlobalStyle = createGlobalStyle`
     
     .korean-font{
       font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    }
+
+    .click-button {
+      &:hover {
+        cursor: pointer;
+      }
     }
 `;
 

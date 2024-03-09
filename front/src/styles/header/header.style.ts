@@ -1,9 +1,8 @@
-import styled from "styled-components"
+import styled, { ThemeContext } from "styled-components"
 
 export const Header = styled.div`
   width: 100%;
   height: 80px;
-  background-color: rgba(242, 244, 243, 1);
   padding: 0 5%;
 
   display: flex;

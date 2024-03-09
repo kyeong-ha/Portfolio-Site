@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
       <S.Header>
-        <Logo onClick={() => window.location.href='/'}/>
+        <Logo className='click-button' onClick={() => window.location.href='/'}/>
 
         <S.Menu>
           <S.MenuItem>Projects</S.MenuItem>
