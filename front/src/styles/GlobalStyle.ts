@@ -14,14 +14,19 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
         font-size: 16px;
-        font-family:'Noto Sans KR', sans-serif;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
         text-align: center;
         position: relative;
         overflow-x: clip;
       }
-      h1, h2, h3, h4, h5, h6 {
-        font-family:'Noto Sans KR', sans-serif;
-        font-size:1rem;
+      h1{
+          font-size: 90px;
+          font-weight: 400;
+      }
+      h2{
+        font-size: 32px;
+        font-weight: 400;
       }
       ul {
         list-style:none;
