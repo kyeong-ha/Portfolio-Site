@@ -4,6 +4,7 @@ import ProfileForm from "./components/profile-form/profile-form";
 import Container from "./components/container/container-layout";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/colors/light-color";
+import TechStackForm from "./components/container/techstack-form";
 
 
 export default function App() {
@@ -14,8 +15,12 @@ export default function App() {
       <Header/>
 
 
-      <Container textAlign="left">
+      {/* <Container textAlign="left">
         <ProfileForm/>
+      </Container> */}
+
+      <Container>
+        <TechStackForm/>
       </Container>
     </ThemeProvider>
     </>
