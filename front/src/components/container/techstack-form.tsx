@@ -38,9 +38,10 @@ const settings = {
     SlidesToScroll: 1
 };
 
+// .slick-arrow + slick-next + slick-prev
+// .slick-list > slick-track > slick-slide
 const StyledSlider = styled(Slider)`
-    width: 100%;
-    height: auto;
+    
 `;
 
 export default function TechStackForm({ front, back, tool }: { front: Object[], back: Object[], tool: Object[], tool: Object[] }) {
