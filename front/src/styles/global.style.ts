@@ -29,8 +29,12 @@ const GlobalStyle = createGlobalStyle`
           font-weight: 400;
       }
       h2{
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 400;
+      }
+      h3{
+        font-size: 22px;
+        font-weight: 500;
       }
       ul {
         list-style:none;
