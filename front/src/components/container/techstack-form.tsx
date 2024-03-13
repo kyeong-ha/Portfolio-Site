@@ -8,6 +8,7 @@ import Next from "../../icons/next-arrow.svg";
 import Prev from "../../icons/prev-arrow.svg";
 
 import styled, { ThemeContext } from "styled-components"
+import Container from './container-layout';
 
 export const FormName = styled.h2`
     width: fit-content;
@@ -138,11 +139,11 @@ const StyledSlider = styled(Slider)`
 
 export default function TechStackForm({ front, back, tool }: { front: Object[], back: Object[], tool: Object[], tool: Object[] }) {
   return (
-    <>
-    <div>
-    <FormName reverse="true">TECH</FormName>
-       <FormName>STACK</FormName>
-    </div>
+    <Container>
+        <div>
+            <FormName reverse="true">TECH</FormName>
+            <FormName>STACK</FormName>
+        </div>
        
 
             <SkillList>
@@ -189,11 +190,6 @@ export default function TechStackForm({ front, back, tool }: { front: Object[], 
                     })}
                 </StyledSlider>
             </SkillList>
-
-        <Scroll>
-            <span></span>
-            <p>Scroll</p>
-        </Scroll>
-    </>
+    </Container>
   );
 }

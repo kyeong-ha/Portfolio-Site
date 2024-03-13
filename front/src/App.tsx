@@ -5,6 +5,7 @@ import Container from "./components/container/container-layout";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/colors/light-color";
 import TechStackForm from "./components/container/techstack-form";
+import { Scroll } from "./styles/scroll.style";
 
 
 export default function App() {
@@ -14,14 +15,14 @@ export default function App() {
       <GlobalStyle />
       <Header/>
 
+      <ProfileForm/>
+      <TechStackForm/>
 
-      {/* <Container textAlign="left">
-        <ProfileForm/>
-      </Container> */}
+      <Scroll>
+            <span></span>
+            <p>Scroll</p>
+      </Scroll>
 
-      <Container>
-        <TechStackForm/>
-      </Container>
     </ThemeProvider>
     </>
   );

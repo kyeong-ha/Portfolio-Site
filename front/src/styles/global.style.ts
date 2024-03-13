@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${(props) => props.theme.bodyBackgroundColor};
         color:${(props) => props.theme.bodyFontColor};
         width: 100%;
-        height: 100%;
+        height: auto;
         min-height: 820px;
         font-size: 16px;
         font-family: "Raleway", sans-serif;

@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`
     width: 90%;
-    height: 100%;
+    height: 100vh;
 
     text-align: ${(props) => (props.textAlign === 'left' ? ' left' : ' center')};
     

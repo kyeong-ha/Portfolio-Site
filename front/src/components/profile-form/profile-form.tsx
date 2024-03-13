@@ -8,7 +8,7 @@ import { Scroll } from '@/styles/scroll.style';
 
 export default function ProfileForm() {
   return (
-    <>
+    <S.Container>
         <S.Profile>
             <Mark />
             <h1 className="profile-name">Park Kyeongha</h1>
@@ -32,11 +32,6 @@ export default function ProfileForm() {
                 <TistoryMark/> Tistory
             </div>
         </S.PlatformLink>
-
-        <Scroll>
-            <span></span>
-            <p>Scroll</p>
-        </Scroll>
-    </>
+    </S.Container>
   );
 }
