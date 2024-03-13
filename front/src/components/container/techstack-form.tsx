@@ -7,60 +7,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import Next from "../../icons/next-arrow.svg";
 import Prev from "../../icons/prev-arrow.svg";
 
-import styled, { ThemeContext } from "styled-components"
-import Container from './container-layout';
+import styled from "styled-components"
+import * as S from '../../styles/container/techstack.style'
 
-export const FormName = styled.h2`
-    width: fit-content;
-    height: auto;
-
-    color: ${(props) => props.reverse ? props.theme.bodyFontColor : props.theme.bodyBackgroundColor};
-    background-color:${(props) => props.reverse ? props.theme.bodyBackgroundColor : props.theme.bodyFontColor};
-
-    padding: 0 0.5%;
-    display: inline-block;
-`;
-
-export const SkillName = styled.div`
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-areas: "title line";
-    
-    align-items: center;
-    column-gap: 1rem;
-
-    & > .line {
-        grid-area: line;
-
-        display: flex;
-        flex-basis: 1;
-        align-items: center;
-        color: ${(props) => props.theme.bodyFontColor};
-        &:before{
-            content: '';
-            flex-grow: 1;
-            background: ${(props) => props.theme.bodyFontColor};
-            height: 1px;
-            font-size: 0px;
-            line-height: 0px;
-        }
-
-        &:after{
-            content: '';
-            flex-grow: 1;
-            background: ${(props) => props.theme.bodyFontColor};
-            height: 1px;
-            font-size: 0px;
-            line-height: 0px;
-        }
-    }
-`;
-
-export const SkillList = styled.div`
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.1rem;
-`;
 
 const frontend = [
     {
@@ -105,10 +54,10 @@ const StyledSlider = styled(Slider)`
 }
     .slick-list{
         .slick-slide{
-            color: ${(props) => props.theme.bodyBackgroundColor};
-            background-color:${(props) => props.theme.bodyFontColor};
-            width: 6rem;
-            height: 6rem;
+            color: #333333;
+            background-color: #F2F4F3;
+            width: 5.5rem;
+            height: 5.5rem;
 
             display: flex;
             justify-content: center;
@@ -119,77 +68,77 @@ const StyledSlider = styled(Slider)`
             
     }
     .slick-arrow{
-        width: 6rem;
-        height: 6rem;
+        width: 5.5rem;
+        height: 5.5rem;
         z-index: 999;
         & > path {
-            stroke: ${(props) => props.theme.bodyFontColor};
+            stroke: #F2F4F3;
         }
     }
     .slick-next{
         right: 0;
-        background-image: linear-gradient(to right, transparent, ${(props) => props.theme.bodyBackgroundColor});
+        background-image: linear-gradient(to right, transparent, #333333);
     }
     .slick-prev{
         left: 0;
-        background-image: linear-gradient(to left, transparent, ${(props) => props.theme.bodyBackgroundColor});
+        background-image: linear-gradient(to left, transparent, #333333);
     }
 
 `;
 
 export default function TechStackForm({ front, back, tool }: { front: Object[], back: Object[], tool: Object[], tool: Object[] }) {
   return (
-    <Container>
+    <S.Container>
         <div>
-            <FormName reverse="true">TECH</FormName>
-            <FormName>STACK</FormName>
+            <S.FormName reverse="true">TECH</S.FormName>
+            <S.FormName>STACK</S.FormName>
         </div>
        
 
-            <SkillList>
-                <SkillName>
-                    <h3>Front-end Skill</h3>
-                    <span className='line'></span>
-                </SkillName>
+        <S.Skill>
+            <S.SkillName>
+                <h3>Front-end Skill</h3>
+                <span className='line'></span>
+            </S.SkillName>
 
-                <StyledSlider {...settings}>
-                    {frontend.map(frontend => {
-                        return <div key={frontend.key}>
-                            {frontend.name}
-                        </div>;
-                    })}
-                </StyledSlider>
-            </SkillList>
+            <StyledSlider {...settings}>
+                {frontend.map(frontend => {
+                    return <div key={frontend.key}>
+                        {frontend.name}
+                    </div>;
+                })}
+            </StyledSlider>
+        </S.Skill>
 
-            <SkillList>
-                <SkillName>
-                    <h3>Back-end Skill</h3>
-                    <span className='line'></span>
-                </SkillName>
+        <S.Skill>
+            <S.SkillName>
+                <h3>Back-end Skill</h3>
+                <span className='line'></span>
+            </S.SkillName>
 
-                <StyledSlider {...settings}>
-                    {frontend.map(frontend => {
-                        return <div key={frontend.key}>
-                            {frontend.name}
-                        </div>;
-                    })}
-                </StyledSlider>
-            </SkillList>
+            <StyledSlider {...settings}>
+                {frontend.map(frontend => {
+                    return <div key={frontend.key}>
+                        {frontend.name}
+                    </div>;
+                })}
+            </StyledSlider>
+        </S.Skill>
 
-            <SkillList>
-                <SkillName>
-                    <h3>Using Tools</h3>
-                    <span className='line'></span>
-                </SkillName>
+        <S.Skill>
+            <S.SkillName>
+                <h3>Using Tools</h3>
+                <span className='line'></span>
+            </S.SkillName>
 
-                <StyledSlider {...settings}>
-                    {frontend.map(frontend => {
-                        return <div key={frontend.key}>
-                            {frontend.name}
-                        </div>;
-                    })}
-                </StyledSlider>
-            </SkillList>
-    </Container>
+            <StyledSlider {...settings}>
+                {frontend.map(frontend => {
+                    return <div key={frontend.key}>
+                        {frontend.name}
+                    </div>;
+                })}
+            </StyledSlider>
+        </S.Skill>
+    </S.Container>
   );
 }

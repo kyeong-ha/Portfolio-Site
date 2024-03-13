@@ -25,16 +25,16 @@ const GlobalStyle = createGlobalStyle`
         align-items: center;
       }
       h1{
-          font-size: 90px;
+          font-size: 4.5rem;
           font-weight: 400;
       }
       h2{
-        font-size: 28px;
+        font-size: 1.6rem;
         font-weight: 400;
       }
       h3{
-        font-size: 22px;
-        font-weight: 500;
+        font-size: 1.15rem;
+        font-weight: 400;
       }
       ul {
         list-style:none;

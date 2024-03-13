@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-    width: 90%;
+    width: 100%;
     height: 100vh;
 
     text-align: left;
@@ -9,6 +9,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    padding: 8% 8%;
 `;
 
 export const Profile = styled.div`
