@@ -1,10 +1,10 @@
 import GlobalStyle from "./styles/global.style";
 import Header from "./components/header/header";
-import ProfileForm from "./components/profile-form/profile-form";
+import ProfileForm from "./components/container/profile";
 import Container from "./components/container/container-layout";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/colors/light-color";
-import TechStackForm from "./components/container/techstack-form";
+import TechStackForm from "./components/container/tech-stack";
 import { Scroll } from "./styles/scroll.style";
 
 

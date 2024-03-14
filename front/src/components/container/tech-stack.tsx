@@ -8,29 +8,8 @@ import Next from "../../icons/next-arrow.svg";
 import Prev from "../../icons/prev-arrow.svg";
 
 import styled from "styled-components"
-import * as S from '../../styles/container/techstack.style'
-
-
-const frontend = [
-    {
-        id: 1,
-        name: 'HTML5',
-        url: '',
-        description: 'test'
-    },
-    {
-        id: 2,
-        name: 'CSS3',
-        url: '',
-        description: 'test'
-    },
-    {
-        id: 3,
-        name: 'Sass',
-        url: '',
-        description: 'test'
-    }
-]
+import * as S from '../../styles/container/tech-stack.style'
+import { frontSkill, backSkill, toolSkill } from '@/data/tech-stack.data';
 
 
 const settings = {
@@ -89,56 +68,56 @@ const StyledSlider = styled(Slider)`
 export default function TechStackForm({ front, back, tool }: { front: Object[], back: Object[], tool: Object[], tool: Object[] }) {
   return (
     <S.Container>
-        <div>
-            <S.FormName reverse="true">TECH</S.FormName>
-            <S.FormName>STACK</S.FormName>
-        </div>
-       
+        <S.FormName>
+            <h2>TECH</h2><h2>STACK</h2>
+        </S.FormName>
 
-        <S.Skill>
+        <S.SkillList>
+        <div>
             <S.SkillName>
                 <h3>Front-end Skill</h3>
                 <span className='line'></span>
             </S.SkillName>
 
             <StyledSlider {...settings}>
-                {frontend.map(frontend => {
-                    return <div key={frontend.key}>
-                        {frontend.name}
+                {frontSkill.map(data => {
+                    return <div key={data.key}>
+                        {data.name}
                     </div>;
                 })}
             </StyledSlider>
-        </S.Skill>
+        </div>
 
-        <S.Skill>
+        <div>
             <S.SkillName>
                 <h3>Back-end Skill</h3>
                 <span className='line'></span>
             </S.SkillName>
 
             <StyledSlider {...settings}>
-                {frontend.map(frontend => {
-                    return <div key={frontend.key}>
-                        {frontend.name}
+                {backSkill.map(data => {
+                    return <div key={data.key}>
+                        {data.name}
                     </div>;
                 })}
             </StyledSlider>
-        </S.Skill>
+        </div>
 
-        <S.Skill>
+        <div>
             <S.SkillName>
                 <h3>Using Tools</h3>
                 <span className='line'></span>
             </S.SkillName>
 
             <StyledSlider {...settings}>
-                {frontend.map(frontend => {
-                    return <div key={frontend.key}>
-                        {frontend.name}
+                {toolSkill.map(data => {
+                    return <div key={data.key}>
+                        {data.name}
                     </div>;
                 })}
             </StyledSlider>
-        </S.Skill>
+        </div>
+        </S.SkillList>
     </S.Container>
   );
 }

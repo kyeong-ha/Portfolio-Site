@@ -8,23 +8,29 @@ export const Container = styled.div`
     
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     
     background-color: #333333;
     color: #F2F4F3;
 
     padding: 8% 8%;
+    padding-bottom: 0;
 `;
 
-export const FormName = styled.h2`
-    width: fit-content;
+export const FormName = styled.span`
+    width: 100%;
     height: auto;
 
-    color: ${(props) => props.reverse ? '#F2F4F3' : '#333333'};
-    background-color:${(props) => props.reverse ? '#333333' : '#F2F4F3'};
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
 
-    padding: 0 0.5%;
-    display: inline-block;
+    & > h2:last-child {
+      background-color: #F2F4F3;
+      color: #333333;
+      padding: 0 0.2%;
+    }
 `;
 
 export const SkillName = styled.div`
@@ -34,6 +40,7 @@ export const SkillName = styled.div`
     
     align-items: center;
     column-gap: 1rem;
+    margin-bottom: 2%;
 
     & > .line {
         grid-area: line;
@@ -62,8 +69,11 @@ export const SkillName = styled.div`
     }
 `;
 
-export const Skill = styled.div`
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
+export const SkillList = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & > div {
+    margin-bottom: 8%;
+  }
 `;
