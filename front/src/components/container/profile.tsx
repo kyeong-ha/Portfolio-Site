@@ -3,7 +3,7 @@ import Mark from "../../icons/mark.svg";
 import GithubMark from "../../icons/github-mark.svg";
 import TistoryMark from "../../icons/tistory-mark.svg";
 
-import * as S from '../../styles/profile-form/profile-form.style';
+import * as S from '../../styles/container/profile.style';
 import { Scroll } from '@/styles/scroll.style';
 
 export default function ProfileForm() {

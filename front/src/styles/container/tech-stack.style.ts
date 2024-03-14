@@ -2,19 +2,19 @@ import styled from "styled-components"
 
 export const Container = styled.div`
     width: 100%;
-    height: 100vh;
+    height: auto;
 
     text-align: center;
     
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     
     background-color: #333333;
     color: #F2F4F3;
 
-    padding: 8% 8%;
-    padding-bottom: 0;
+    padding: 10% 8%;
+    gap: 7%;
 `;
 
 export const FormName = styled.span`
@@ -24,7 +24,7 @@ export const FormName = styled.span`
     display: flex;
     justify-content: center;
     gap: 0.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
 
     & > h2:last-child {
       background-color: #F2F4F3;
@@ -70,10 +70,9 @@ export const SkillName = styled.div`
 `;
 
 export const SkillList = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  & > div {
-    margin-bottom: 8%;
-  }
+  justify-content: center;
+  gap: 3rem;
 `;

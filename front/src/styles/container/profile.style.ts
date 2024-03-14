@@ -10,7 +10,8 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
 
-    padding: 8% 8%;
+    padding: 0 8%;
+    padding-top: 70px;
 `;
 
 export const Profile = styled.div`
