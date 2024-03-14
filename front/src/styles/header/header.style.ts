@@ -10,7 +10,8 @@ export const Header = styled.div`
   align-items: center;
 
   position: fixed;
-  background-color: rgb(242 244 243 / 60%);
+  background-color: rgb(242 244 243 / 80%);
+  z-index: 10;
 `;
 
 export const Menu = styled.span`

@@ -8,8 +8,8 @@ const GlobalStyle = createGlobalStyle`
         border:0;
     }
     html,body,#root {
-        background-color: #333333;
-        color: #F2F4F3;
+        color: #333333;
+        background-color: #F2F4F3;
         width: 100%;
         height: auto;
         min-height: 820px;

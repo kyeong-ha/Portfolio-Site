@@ -1,8 +1,9 @@
 import styled from "styled-components"
 
 export const Scroll = styled.a`
-  position: relative;
-  width: 100%;
+  position: fixed;
+  top: 90vh;
+  
   height: 2.7rem;
 
   display: flex;

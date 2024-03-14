@@ -1,5 +1,13 @@
 import styled from "styled-components"
 
+import Slider from "react-slick";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+import Next from "../../icons/next-arrow.svg";
+import Prev from "../../icons/prev-arrow.svg";
+
+
 export const Container = styled.div`
     width: 100%;
     height: auto;
@@ -75,4 +83,57 @@ export const SkillList = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
+`;
+
+export const settings = {
+    variableWidth: true,
+    dots: false,
+    infinite: false,
+    speed: 600,
+    slidesToShow: 1,
+    SlidesToScroll: 1,
+    nextArrow: (
+        <Next className="next"/>
+    ),
+    prevArrow: (
+        <Prev className="prev"/>
+    )
+};
+
+export const StyledSlider = styled(Slider)`
+&::after{
+    background: linear-gradient(to left, #333, #333 10%, transparent);
+}
+    .slick-list{
+        .slick-slide{
+            color: #333333;
+            background-color: #F2F4F3;
+            width: 5.5rem;
+            height: 5.5rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0 1.25rem;
+        }
+            
+    }
+    .slick-arrow{
+        width: 5.5rem;
+        height: 5.5rem;
+        z-index: 9;
+        & > path {
+            stroke: #F2F4F3;
+        }
+    }
+    .slick-next{
+        right: 0;
+        background-image: linear-gradient(to right, transparent, #333333);
+    }
+    .slick-prev{
+        left: 0;
+        background-image: linear-gradient(to left, transparent, #333333);
+    }
+
 `;

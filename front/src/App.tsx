@@ -4,6 +4,7 @@ import ProfileForm from "./components/container/profile";
 import Container from "./components/container/container-layout";
 import TechStackForm from "./components/container/tech-stack";
 import { Scroll } from "./styles/scroll.style";
+import ProjectsForm from "./components/container/projects";
 
 
 export default function App() {
@@ -14,7 +15,8 @@ export default function App() {
 
       <ProfileForm/>
       <TechStackForm/>
-
+      <ProjectsForm/>
+      
       <Scroll>
             <span></span>
             <p>Scroll</p>
